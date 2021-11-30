@@ -1,12 +1,21 @@
 package org.launchcode.techjobs.persistent.models;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
-
+@MappedSuperclass
 public abstract class AbstractEntity {
 
+    @Id
+    @GeneratedValue
     private int id;
 
+    @NotNull
+    @NotBlank(message = "This field must filled out")
+    @Size(min =2, max = 250)
     private String name;
 
     public int getId() {
