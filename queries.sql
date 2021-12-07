@@ -11,4 +11,4 @@ DROP TABLE techjobs.job;
 SELECT * FROM techjobs.skill INNER JOIN (techjobs.job, techjobs.job_skills) ON techjobs.job.id = techjobs.job_skills.jobs_id AND techjobs.skill.id = techjobs.job_skills.skills_id
 ORDER BY techjobs.skill.name;
 --write a query to return a list of all fields of all skills that are attached to jobs in alphabetical order by name.
---If a skill does not have a job listed, it should not be included in the results of this query.
+--If a skill does not have a job listed, it should not be included in the results of this query. testing git token
